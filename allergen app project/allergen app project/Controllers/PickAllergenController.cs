@@ -9,12 +9,13 @@ using Microsoft.AspNetCore.Mvc;
 namespace allergen app project.Controllers
 {
     public class PickAllergenController : Controller
-    {
-        // GET: /<controller>/
+{
+    // GET: /<controller>/
 
-        //Action method for displaying "Pick Allergen" page 
-        public IActionResult Index()
-        {
+    //Action method for displaying "Pick Allergen" page 
+    public IActionResult PickAllergenChoice()
+
+    {
 
         //Retrieve allergens for a drop down list
         var allergens = GetAllAllergens();
@@ -24,7 +25,23 @@ namespace allergen app project.Controllers
 
         //Make a list of SelectListItems to be rendered on the page
         model.Allergens = GetSelectListItem(allergens);
-            return View(model);
-        }
+        return View(model);
     }
+
+    //Method for accepting user entered data when "submit" button is pressed 
+}
+
+    //Returns a list of allergens. Future plans will make source a database
+    private IEnumerable<string> GetAllAllergens()
+{
+    return new List<string>
+    {
+        "Nuts",
+        "Milk/Dairy",
+        "Soy",
+        "Shellfish",
+
+    };
+}
+    
 }

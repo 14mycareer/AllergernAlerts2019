@@ -1,0 +1,9 @@
+I've restructured my project slightly. It is still an app where a user can select a food allergen and then retrieve a list of restaurants that serve foods that allergen free.  Since I modified some of the features: seection, listing, and updating, I added some new user stories. Please see https://www.pivotaltracker.com/n/projects/2159152.
+
+I am behind so my goals for the next week are rather ambitious but I am going to do my best. I want to have my home page with a drop down list of food allergens (static list for now but future plans are to have a database for the drop down) to render. I have started my code and have pushed what I have done thus far to my github project repo (https://github.com/14myclass/apprenticeship-apps). On my pivitol tracker log, I am on the bottom 2 users stories. I want to have this completed this weekend so that I may move on to the next objective which will be to us an API to retrieve the restaurant data. Not quite sure yet how to apply this but I did find that Nutritionix looks promising.
+
+from Food+Tech Connect Good Nutrition:
+
+launching a Nutrition API pilot program in late October to give developers free access to their nutrition data, which will extend the reach of any participating company’s data. The API will include 40,000 menu items from 350 restaurants, 10,000 items from the USDA SR24 database and 10,000+ CPG items from over 1,500 food manufacturers. 
+
+ 
