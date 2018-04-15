@@ -29,6 +29,16 @@ namespace allergen app project.Controllers
     }
 
     //Method for accepting user entered data when "submit" button is pressed 
+  [HttpPost]
+  public IActionResult PickAllergenChoice(PickAllergen model)
+
+    {
+        //Get list of all allergens again
+        var allergens = GetAllAllergens();
+
+        //Set the allergens on the model. This is done because only the selected value from drop dow is posted back but we want all of them.
+        model.Allergens = GetSelectListItems(allergens);
+}
 }
 
     //Returns a list of allergens. Future plans will make source a database
@@ -43,5 +53,29 @@ namespace allergen app project.Controllers
 
     };
 }
+//Redirect to completed selection page
+
+
+//Method takes a list of strings & returns a list of SelectListItem objects which will be used to render the drop down list.
+private IEnumerable<SelectListItem> GetSelectListItems(IEnumerable<string> elements)
+{
+    //Create empty list to hold result
+    var selectList = new List<SelectListItem>();
+
+    //For each string of 'element' variable creates a new SelectListItem object that helps to render each item as:
+    //<option value="Allergen">Allergen</option>
+    foreach (var element in elements)
+    {
+        selectList.Add(new SelectListItem
+        {
+            ValueTask = element,
+            Text = element
+        });
+    }
+    return selectList;
+
+
+}
     
 }
+
