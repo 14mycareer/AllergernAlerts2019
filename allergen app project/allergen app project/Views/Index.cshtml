@@ -1,0 +1,23 @@
+﻿@model Dropdowns.Model.PickAllergen
+@{ViewBag.Title = "PickAllergenChoice";}
+
+<div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+        <h1>SELECT AN ALLERGEN</h1>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                @using (Html.BeginForm("PickAllergenChoice", "PickAllergenChoice", FormMethod.Post, new { role = "form" }))
+                {
+                    @* Allergen selection dropdown*@
+                    <div class="form-group">
+                        @Html.LabelFor(m=>m.Allergen)
+                        @Html.DropDownListFor(m=> m.Allergen, new {  @class = "form-control"})
+                    </div>
+                    <button type="submit " class="btn btn-primary">PickAllergenChoice</button>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
