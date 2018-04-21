@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AllergenAlertMVC.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AllergenAlertMVC.Data
 {
