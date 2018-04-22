@@ -64,6 +64,7 @@ namespace AllergenAlertMVC
                     name: "default",
                     template: "{controller=Restaurant}/{action=Index}/{id?}");
             });
+            context.Database.EnsureCreated();
         }
     }
 }
