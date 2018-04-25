@@ -29,7 +29,7 @@ namespace AllergenAlertMVC.Controllers
             //need to fix to display listing of restaurants; change c=>c.Category
             //IList<Restaurant> restaurants = context.Restaurants.Include(c => c.Category).ToList();
 
-            List<Restaurant> restaurants = context.Restaurants.ToList();
+            IList<Restaurant> restaurants = context.Restaurants.ToList();
 
             return View(restaurants);
         }

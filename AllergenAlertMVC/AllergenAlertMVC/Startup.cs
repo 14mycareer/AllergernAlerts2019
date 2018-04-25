@@ -32,8 +32,8 @@ namespace AllergenAlertMVC
         public void ConfigureServices(IServiceCollection services)
         {
 
-           // services.AddDbContext<RestaurantDbContext>(options =>
-            //    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<RestaurantDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             //adding framework services
             services.AddMvc();
