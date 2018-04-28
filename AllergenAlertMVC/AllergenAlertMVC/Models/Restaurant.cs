@@ -11,6 +11,7 @@ namespace AllergenAlertMVC.Models
         public string Name { get; set; }
         public string Address { get; set; }
         public int Phone { get; set; }
+        //public int RestaurantAllergenID { get; set; }
 
         public List<Restaurant>RestaurantListing { get; set; }
     }

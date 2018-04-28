@@ -33,6 +33,12 @@ namespace AllergenAlertMVC.Controllers
 
             return View(restaurants);
         }
+
+        public IActionResult Add()
+        {
+            AddRestaurantViewModel addRestaurantViewModel = new AddRestaurantViewModel(context.Restaurants.ToList());
+            return View(addRestaurantViewModel);
+        }
     }
        
 }
