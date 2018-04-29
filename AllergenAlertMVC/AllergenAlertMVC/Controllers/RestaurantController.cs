@@ -44,8 +44,15 @@ namespace AllergenAlertMVC.Controllers
 
         [HttpPost]
         [Route("/Restaurant/Add")]
-        public IActionResult NewRestaurant(string name, string address, string phone)
-        { Restaurant.Add(name, address, phone);
+        public IActionResult NewRestaurant(string name, string address, int pho
+            ne)
+        {
+            Restaurant newRestaurant = new Restaurant
+            { Name = name, Address = address,
+                Phone = phone
+            };
+            Restaurant.Add(newRestaurant);
+
             return Redirect("/Restaurant");
 
         }
