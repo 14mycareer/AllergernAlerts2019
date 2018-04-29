@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using AllergenAlertMVC.Models;
 using AllergenAlertMVC.Data;
 using Microsoft.EntityFrameworkCore;
+using AllergenAlertMVC.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -37,19 +38,17 @@ namespace AllergenAlertMVC.Controllers
         public IActionResult Add()
         {
 
-            return View();
-            //AddRestaurantViewModel addRestaurantViewModel = new AddRestaurantViewModel(context.Restaurants.ToList());
-            //return View(addRestaurantViewModel);
+            AddRestaurantViewModel addRestaurantViewModel = new AddRestaurantViewModel();
+            return View(addRestaurantViewModel);
         }
 
         [HttpPost]
-        [Route("/Restaurant/Add")]
-        public IActionResult NewRestaurant(string name, string address, int pho
-            ne)
+        public IActionResult Add(AddRestaurantViewModel addRestaurantViewModel)
         {
             Restaurant newRestaurant = new Restaurant
-            { Name = name, Address = address,
-                Phone = phone
+            { Name = addRestaurantViewModel.Name,
+                Address = addRestaurantViewModel.Address,
+                Phone = addRestaurantViewModel.Phone
             };
             Restaurant.Add(newRestaurant);
 
