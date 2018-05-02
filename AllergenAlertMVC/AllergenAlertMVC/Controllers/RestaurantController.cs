@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -37,23 +37,31 @@ namespace AllergenAlertMVC.Controllers
 
         public IActionResult Add()
         {
+            
 
-            AddRestaurantViewModel addRestaurantViewModel = new AddRestaurantViewModel();
+                AddRestaurantViewModel addRestaurantViewModel = new AddRestaurantViewModel();
             return View(addRestaurantViewModel);
         }
 
         [HttpPost]
         public IActionResult Add(AddRestaurantViewModel addRestaurantViewModel)
         {
-            Restaurant newRestaurant = new Restaurant
-            { Name = addRestaurantViewModel.Name,
-                Address = addRestaurantViewModel.Address,
-                Phone = addRestaurantViewModel.Phone
-            };
-            Restaurant.Add(newRestaurant);
+            if (ModelState.IsValid)
+            {
+                Restaurant newRestaurant = new Restaurant
+                {
+                    Name = addRestaurantViewModel.Name,
+                    Address = addRestaurantViewModel.Address,
+                    Phone = addRestaurantViewModel.Phone
+                };
+                //Restaurant.Add(newRestaurant);
+                context.Restaurants.Add(newRestaurant);
+                context.SaveChanges();
 
-            return Redirect("/Restaurant");
+                return Redirect("/Restaurant");
+            }
 
+            return View(addRestaurantViewModel);
         }
     }
        
