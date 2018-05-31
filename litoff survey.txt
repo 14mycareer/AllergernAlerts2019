@@ -1,0 +1,10 @@
+1.  My project is called AllergenAlerts.  This app will allow for a user to select food allergens from a drop down menu and search a premade database of restaurants that offer  menu items that are free of the selected allergen. My app will return a listing of restaurants by name with an address and a phone number. A later feature I would like to add is a locator for each restaurant in the list. I currently have code that creates a database using the entity framework in a many to many layout (many allergens can have many restaurants that offer said allergen free items and vice versa). I am continuously working on my app to get it up and running.
+
+2. I believe that programming is a powerful skill that has applications in many fields. By knowing how to program, I feel a will be a valuable resource for my future employer and can create exciting and inspiring products or services.
+
+3. liftoff-assignments/C1-Online_Profiles/updated liftoff resume.pdf
+
+4. I am not sure at the moment. I want to strengthen my C# skills and maybe learn java script. I would also like to learn how to manage databases. I want to learn more programming that is in demand and widely used to create products or services.
+
+
+7. My formal education is in Engineering. I have had experience in teaching at the secondary education and college levels in math, science, and engineering labs domestically and abroad. I currently manage install projects for Home Depot. 

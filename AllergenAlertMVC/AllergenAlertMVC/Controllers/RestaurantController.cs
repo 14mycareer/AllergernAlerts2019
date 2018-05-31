@@ -39,7 +39,7 @@ namespace AllergenAlertMVC.Controllers
         {
             
 
-                AddRestaurantViewModel addRestaurantViewModel = new AddRestaurantViewModel();
+            AddRestaurantViewModel addRestaurantViewModel = new AddRestaurantViewModel();
             return View(addRestaurantViewModel);
         }
 
