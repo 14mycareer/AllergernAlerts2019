@@ -1,7 +1,4 @@
-﻿@model IList<AllergenAlertMVC.Models.Restaurant>
-
-<h1>@ViewBag.Title</h1>
-
+﻿
 <table class="table">
 
     <tr>
@@ -10,19 +7,9 @@
         <th>Phone</th>
     </tr>
 
-    @foreach (var restaurant in Model)
-    {
-        <tr>
-            <td>@restaurant.Name</td>
-            <td>@restaurant.Address</td>
-            <td>@restaurant.Phone</td>
-        </tr>
-    }
+  
 </table>
 
-@if (Model.Count == 0)
-{
-    <p>NO RESTAURANT DATA YET!</p>
-}
+
 
 <p><a asp-controller="Restaurant" asp-action="Add">Add | Remove</a></p>
